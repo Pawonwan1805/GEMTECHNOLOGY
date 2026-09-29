@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อุปกรณ์เสริม</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="image/gem.png" class="logonav" alt="Gem">
+                </a>
+            </div>
+            <div class="nav-menu">
+
+                <a href="index.html" class="nav-menu-item">
+                    HOME
+                </a>
+
+                <a href="about.html" class="nav-menu-item">
+                    ABOUT
+                </a>
+
+                <a href="support.html" class="nav-menu-item">
+                    SUPPORT
+                </a>
+
+            </div>
+            <div class="nav-profile">
+                <a href="login.html" class="login-button" id="profile-link">เข้าสู่ระบบ</a>
+                <p class="nav-profile-name">GEM</p>
+                <div class="nav-profile-cart">
+                    <i class="fas fa-bag-shopping"></i>
+                    <div class="cartcount">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" class="sidebar-search" placeholder="Search">
+            <a href="menu1.html" class="sidebar-items">
+                อุปกรณ์เสริม
+            </a>
+            <a href="menu2.html" class="sidebar-items">
+                โทรศัพท์มือถือ
+            </a>
+            <a href="menu3.html" class="sidebar-items">
+                แลปท็อป
+            </a>
+
+        </div>
+        <div class="product" data-category="accessory">
+            <h1 class="category-title">อุปกรณ์เสริม</h1>
+            <div class="product-items">
+                <p style="font-size: 1.2vw;">หูฟัง Gaming</p>
+                <img class="product-img" src="image/headphone.jpg" alt="หูฟัง Gaming">
+                <strong style="font-size: 1.2vw;">590 บาท</strong>
+            </div>
+            <div class="product-items">
+                <p style="font-size: 1.2vw;">หัวชาร์จ</p>
+                <img class="product-img" src="image/charger.jpg" alt="หัวชาร์จ">
+                <strong style="font-size: 1.2vw;">890 บาท</strong>
+            </div>
+            <div class="product-items">
+                <p style="font-size: 1.2vw;">พาวเวอร์แบงค์</p>
+                <img class="product-img" src="image/powerbank.jpg" alt="พาวเวอร์แบงค์">
+                <strong style="font-size: 1.2vw;">490 บาท</strong>
+            </div>
+            <div class="product-items">
+                <p style="font-size: 1.2vw;">แรม</p>
+                <img class="product-img" src="image/ram.jpg" alt="แรม">
+                <strong style="font-size: 1.2vw;">1,000 บาท</strong>
+            </div>
+            <div class="product-items">
+                <p style="font-size: 1.2vw;">Lexar</p>
+                <img class="product-img" src="image/lexar.jpg" alt="Lexar">
+                <strong style="font-size: 1.2vw;">1,200 บาท</strong>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="common.js"></script>
+    <script src="cart.js"></script>
+    <script src="detail.js"></script>
+    <script src="profile-link.js"></script>
+    <script src="products.js"></script>
+</body>
+
+</html>

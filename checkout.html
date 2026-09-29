@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM - ชำระเงิน</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fbfbfc;
+            color: #333;
+            margin: 0;
+        }
+
+        main {
+            max-width: 560px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #order-summary,
+        form {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+        }
+
+        .row.total {
+            border-top: 1px solid #ddd;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 4px;
+            font-size: 14px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        button {
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: #024482;
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #checkout-msg {
+            color: #d32f2f;
+            margin-top: 10px;
+            min-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>ชำระเงิน</h1>
+        <div id="order-summary">กำลังโหลด...</div>
+        <form id="checkout-form">
+            <label for="co-name">ชื่อผู้รับ</label>
+            <input id="co-name" required>
+            <label for="co-phone">เบอร์โทรศัพท์</label>
+            <input id="co-phone" type="tel" pattern="[0-9]{9,10}" title="ตัวเลข 9-10 หลัก" required>
+            <label for="co-address">ที่อยู่จัดส่ง</label>
+            <textarea id="co-address" rows="3" required></textarea>
+            <button type="submit">ยืนยันคำสั่งซื้อ</button>
+            <p id="checkout-msg"></p>
+        </form>
+        <a href="index.html">← กลับไปเลือกสินค้า</a>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="common.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

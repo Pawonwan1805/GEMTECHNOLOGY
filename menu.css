@@ -1,0 +1,1612 @@
+/* ========================================= 
+   GEM - MENU PAGE 
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Noto Sans Thai", Arial, sans-serif;
+    background: #f4f6fb;
+    color: #172033;
+}
+
+
+/* ========================================= 
+   NAVBAR - คงรูปแบบเดิม 
+   ========================================= */
+
+nav {
+    width: 100%;
+    padding: 18px 30px;
+    background: #f4f6fb;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1450px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(30, 45, 90, 0.10);
+}
+
+
+/* Logo */
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logonav {
+    width: 180px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ========================================= 
+   NAV MENU 
+   ========================================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.nav-menu-item {
+    position: relative;
+    padding: 24px 2px;
+
+    text-decoration: none;
+    color: #20278f;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.nav-menu-item::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+
+    width: 0;
+    height: 3px;
+
+    border-radius: 10px;
+    background: #2738d5;
+
+    transform: translateX(-50%);
+    transition: 0.25s ease;
+}
+
+.nav-menu-item:hover {
+    color: #1523b3;
+}
+
+.nav-menu-item:hover::after,
+.nav-menu-item.active::after {
+    width: 100%;
+}
+
+
+/* ========================================= 
+   PROFILE / LOGIN / CART 
+   ========================================= */
+
+.nav-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-button {
+    padding: 8px 14px;
+
+    border: 1px solid #2738d5;
+    border-radius: 9px;
+
+    color: #2738d5;
+    background: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.login-button:hover {
+    color: #ffffff;
+    background: #2738d5;
+}
+
+.nav-profile-name {
+    margin: 0;
+    color: #20278f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-profile-cart {
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #20278f;
+    font-size: 20px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.nav-profile-cart:hover {
+    transform: scale(1.1);
+}
+
+.cartcount {
+    position: absolute;
+
+    top: -2px;
+    right: -3px;
+
+    min-width: 17px;
+    height: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 4px;
+
+    border-radius: 50%;
+    background: #ed1c2e;
+    color: white;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ========================================= 
+   MAIN CONTAINER 
+   ========================================= */
+
+.container {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 10px auto 50px;
+    padding: 0 10px;
+
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+
+/* ========================================= 
+   SIDEBAR 
+   ========================================= */
+
+.sidebar {
+    width: 190px;
+    flex-shrink: 0;
+
+    padding: 18px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e9f1;
+    border-radius: 18px;
+
+    box-shadow: 0 7px 25px rgba(30, 45, 90, 0.07);
+
+    position: sticky;
+    top: 20px;
+}
+
+
+/* Search */
+
+.sidebar-search {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d9ddea;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #f8f9fc;
+    color: #172033;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.sidebar-search:focus {
+    background: #ffffff;
+
+    border-color: #293bd8;
+
+    box-shadow: 0 0 0 3px rgba(41, 59, 216, 0.08);
+}
+
+
+/* Sidebar menu */
+
+.sidebar-items {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 9px;
+    padding: 11px 12px;
+
+    border: 1px solid #dce0ea;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #283044;
+
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: all 0.2s ease;
+}
+
+.sidebar-items:hover {
+    color: #2738d5;
+    border-color: #2738d5;
+    background: #f2f4ff;
+
+    transform: translateX(3px);
+}
+
+
+/* ========================================= 
+   PRODUCT AREA 
+   ========================================= */
+
+.product {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* ========================================= 
+   CATEGORY TITLE 
+   ========================================= */
+
+.category-title {
+    margin: 0 0 25px;
+    padding: 5px 5px 12px;
+
+    color: #17203a;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    border-bottom: 1px solid #e1e4ed;
+}
+
+.category-title::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    margin-top: 9px;
+
+    border-radius: 20px;
+    background: #293bd8;
+}
+
+
+/* ========================================= 
+   PRODUCT GRID 
+   ========================================= */
+
+.product-items {
+    display: inline-flex;
+    vertical-align: top;
+
+    flex-direction: column;
+
+    width: calc(20% - 16px);
+    min-height: 330px;
+
+    margin-right: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e9f1;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(30, 45, 90, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-items:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(41, 59, 216, 0.18);
+
+    box-shadow: 0 16px 35px rgba(30, 45, 90, 0.13);
+}
+
+
+/* ========================================= 
+   PRODUCT NAME 
+   ========================================= */
+
+.product-items p {
+    margin: 2px 0 12px;
+    min-height: 25px;
+
+    color: #1b2438;
+
+    font-size: 16px !important;
+    font-weight: 700;
+}
+
+
+/* ========================================= 
+   PRODUCT IMAGE 
+   ========================================= */
+
+.product-img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: contain;
+    display: block;
+
+    margin: auto 0;
+    padding: 10px;
+
+    background: #f8f9fc;
+    border-radius: 13px;
+
+    transition: transform 0.3s ease;
+}
+
+.product-items:hover .product-img {
+    transform: scale(1.05);
+}
+
+
+/* ========================================= 
+   PRICE 
+   ========================================= */
+
+.product-items strong {
+    display: block;
+
+    margin-top: 14px;
+
+    color: #2639d0;
+
+    font-size: 18px !important;
+    font-weight: 800;
+}
+
+
+/* ========================================================= 
+   PRODUCT DETAIL 
+   ใช้กับ detail.js ของคุณโดยตรง 
+   ========================================================= */
+
+.model {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    isolation: isolate;
+}
+
+
+/* พื้นหลังมืด */
+
+.model-bg {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(3px);
+
+    cursor: pointer;
+
+    z-index: -1;
+}
+
+
+/* ========================================= 
+   กล่องรายละเอียดสินค้า 
+   ========================================= */
+
+.model-page {
+    position: relative;
+
+    width: 880px;
+    max-width: 95vw;
+
+    min-height: 330px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.30);
+
+    animation: detailModalShow 0.25s ease;
+
+    overflow: hidden;
+}
+
+
+/* Animation */
+
+@keyframes detailModalShow {
+
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* ========================================= 
+   หัวข้อรายละเอียด 
+   ========================================= */
+
+.model-page h2 {
+    margin: 0 0 20px;
+
+    color: #172033;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* ========================================= 
+   เนื้อหาสินค้า 
+   ========================================= */
+
+.modaldesc-content {
+    display: grid;
+
+    grid-template-columns: 330px 1fr;
+
+    gap: 28px;
+
+    align-items: center;
+}
+
+
+/* ========================================= 
+   รูปสินค้า 
+   ========================================= */
+
+.modaldesc-img {
+    width: 330px;
+    height: 240px;
+
+    display: block;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+    background: #f7f8fb;
+
+    border-radius: 12px;
+}
+
+
+/* ========================================= 
+   รายละเอียดด้านขวา 
+   ========================================= */
+
+.modaldesc-detail {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+/* ข้อความ */
+
+.modaldesc-detail>p {
+    margin: 0 0 10px;
+
+    color: #172033;
+
+    font-size: 18px;
+
+    line-height: 1.55;
+}
+
+
+/* ชื่อสินค้า */
+
+.modaldesc-detail>p:first-child {
+    margin-bottom: 6px;
+
+    color: #111827;
+
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+/* ราคา */
+
+.modaldesc-detail>p:nth-child(2) {
+    margin-bottom: 12px;
+
+    color: #2639d0;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* รายละเอียด */
+
+.modaldesc-detail>p:nth-child(3) {
+    color: #4b5563;
+
+    font-size: 16px;
+}
+
+
+/* ========================================= 
+   ปุ่มควบคุม 
+   ========================================= */
+
+.btn-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+
+/* ปุ่มทั่วไป */
+
+.btn {
+    min-width: 90px;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* ปุ่มปิด */
+
+.detail-close {
+    background: #d1d5db;
+
+    color: #111827;
+}
+
+.detail-close:hover {
+    background: #b8bdc6;
+
+    transform: translateY(-1px);
+}
+
+
+/* ปุ่มเพิ่มลงตะกร้า */
+
+.btn-buy {
+    background: #1014a8;
+
+    color: #ffffff;
+}
+
+.btn-buy:hover {
+    background: #080b85;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(16, 20, 168, 0.25);
+}
+
+
+/* ========================================= 
+   ป้องกันหน้าเว็บด้านหลังเลื่อน 
+   ตอนมี Modal 
+   ========================================= */
+
+body:has(.product-detail-modal) {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CART MODAL - ตะกร้าสินค้า
+   แก้เฉพาะส่วนนี้
+   ========================================================= */
+
+
+/* =========================================
+   พื้นหลังตะกร้า
+   ========================================= */
+
+.cart-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(4px);
+
+    overflow-y: auto;
+}
+
+
+/* =========================================
+   กล่องตะกร้า
+   ========================================= */
+
+.cart-modal-content {
+    position: relative;
+
+    width: 750px;
+    max-width: 95vw;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 38px 38px 34px;
+
+    background: #f8f9ff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.28);
+
+    animation: cartModalShow 0.25s ease;
+}
+
+
+/* =========================================
+   Animation
+   ========================================= */
+
+@keyframes cartModalShow {
+
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   หัวข้อตะกร้า
+   ========================================= */
+
+.cart-modal-header {
+    width: 100%;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    margin: 0 0 28px;
+
+    padding: 0;
+
+    position: relative;
+}
+
+
+.cart-modal-header h2 {
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    color: #171717;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   ปุ่มปิดตะกร้า
+   ========================================= */
+
+.cart-close {
+    width: 33px !important;
+    height: 28px !important;
+
+    min-width: 33px !important;
+    min-height: 28px !important;
+
+    flex: 0 0 33px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    border: none !important;
+
+    border-radius: 5px !important;
+
+    background: #808080 !important;
+
+    color: #ffffff !important;
+
+    font-family: inherit;
+
+    font-size: 12px !important;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.cart-close:hover {
+    background: #666666 !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   รายการสินค้า
+   ========================================= */
+
+.cart-item {
+    width: 100%;
+
+    min-height: 108px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 12px 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe3f2;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 5px 15px rgba(30, 45, 90, 0.05);
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================
+   รูปสินค้าในตะกร้า
+   สำคัญ - ป้องกันรูปขยายเต็มกล่อง
+   ========================================= */
+
+.cart-item-img {
+    width: 55px !important;
+    height: 55px !important;
+
+    min-width: 55px !important;
+    min-height: 55px !important;
+
+    max-width: 55px !important;
+    max-height: 55px !important;
+
+    flex: 0 0 55px !important;
+
+    display: block !important;
+
+    object-fit: contain !important;
+
+    margin: 0 10px 0 0 !important;
+
+    padding: 0 !important;
+
+    background: #f3f4f7;
+
+    border-radius: 5px;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ป้องกัน CSS img ตัวอื่นมาทับรูปใน Cart */
+
+.cart-item img {
+    width: 55px !important;
+    height: 55px !important;
+
+    min-width: 55px !important;
+    min-height: 55px !important;
+
+    max-width: 55px !important;
+    max-height: 55px !important;
+
+    flex: 0 0 55px !important;
+
+    display: block !important;
+
+    object-fit: contain !important;
+
+    margin: 0 10px 0 0 !important;
+
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   ข้อมูลสินค้า
+   ========================================= */
+
+.cart-item-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   ชื่อสินค้า
+   ========================================= */
+
+.cart-item-name {
+    margin: 0 0 3px;
+
+    color: #161616;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   ราคาต่อชิ้น
+   ========================================= */
+
+.cart-item-price {
+    margin: 0;
+
+    color: #171717;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   จำนวนสินค้า
+   ========================================= */
+
+.cart-quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 8px;
+}
+
+
+.cart-quantity button {
+    width: 22px !important;
+    height: 22px !important;
+
+    min-width: 22px !important;
+    min-height: 22px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    border-radius: 4px !important;
+
+    background: #1713a8 !important;
+
+    color: #ffffff !important;
+
+    font-family: inherit;
+
+    font-size: 14px !important;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.cart-quantity button:hover {
+    background: #080b85 !important;
+
+    transform: scale(1.05);
+}
+
+
+.cart-quantity span {
+    min-width: 18px;
+
+    text-align: center;
+
+    color: #171717;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   ราคารวมของสินค้าแต่ละชิ้น
+   ========================================= */
+
+.cart-item-total {
+    min-width: 130px;
+
+    margin-left: 10px;
+
+    color: #1713a8;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   ปุ่มลบสินค้า
+   ========================================= */
+
+.cart-remove {
+    width: 34px !important;
+    height: 28px !important;
+
+    min-width: 34px !important;
+    min-height: 28px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 34px !important;
+
+    margin: 0 0 0 10px !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    border-radius: 5px !important;
+
+    background: #858585 !important;
+
+    color: #ffffff !important;
+
+    font-family: inherit;
+
+    font-size: 12px !important;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.cart-remove:hover {
+    background: #666666 !important;
+}
+
+
+/* =========================================
+   เส้นแบ่งด้านล่าง
+   ========================================= */
+
+.cart-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 18px 0 12px;
+
+    background: #dfe2ec;
+}
+
+
+/* =========================================
+   ยอดรวม
+   ========================================= */
+
+.cart-total {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 0;
+}
+
+
+.cart-total-label {
+    color: #252525;
+
+    font-size: 14px;
+
+    font-weight: 400;
+}
+
+
+.cart-total-price {
+    color: #1713a8;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   กรณีไม่มีสินค้า
+   ========================================= */
+
+.cart-empty {
+    padding: 45px 20px;
+
+    color: #777777;
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+
+/* =========================================  
+   SCROLLBAR  
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f3f8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c7ccda;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #293bd8;
+}
+
+
+/* =========================================  
+   TABLET  
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .product-items {
+        width: calc(33.333% - 15px);
+    }
+
+}
+
+
+/* =========================================  
+   MOBILE  
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    nav {
+        padding: 10px;
+    }
+
+    .nav-container {
+        height: 60px;
+        padding: 0 12px;
+        border-radius: 15px;
+    }
+
+    .logonav {
+        width: 125px;
+        height: 50px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-profile {
+        gap: 8px;
+    }
+
+    .nav-profile-name {
+        display: none;
+    }
+
+
+    /* Container */
+
+    .container {
+        display: block;
+        padding: 10px;
+    }
+
+
+    /* Sidebar */
+
+    .sidebar {
+        position: relative;
+
+        top: auto;
+
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Product */
+
+    .product-items {
+        width: calc(50% - 8px);
+
+        margin-right: 10px;
+
+        min-height: 280px;
+    }
+
+    .product-img {
+        height: 150px;
+    }
+
+
+    /* ===================================== 
+       PRODUCT DETAIL MOBILE 
+       ===================================== */
+
+    .model {
+        padding: 15px;
+    }
+
+    .model-page {
+        width: 95vw;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+        padding: 20px;
+    }
+
+    .model-page h2 {
+        font-size: 23px;
+
+        margin-bottom: 15px;
+    }
+
+    .modaldesc-content {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .modaldesc-img {
+        width: 100%;
+
+        height: 230px;
+    }
+
+    .modaldesc-detail>p:first-child {
+        font-size: 24px;
+    }
+
+    .modaldesc-detail>p:nth-child(2) {
+        font-size: 19px;
+    }
+
+    .modaldesc-detail>p:nth-child(3) {
+        font-size: 16px;
+    }
+
+    .btn-control {
+        width: 100%;
+    }
+
+
+    /* =====================================
+       CART MOBILE
+       ===================================== */
+
+    .cart-modal {
+        padding: 15px;
+    }
+
+    .cart-modal-content {
+        width: 95vw;
+
+        max-width: 95vw;
+
+        max-height: 90vh;
+
+        padding: 25px 20px;
+
+        border-radius: 17px;
+    }
+
+    .cart-modal-header {
+        margin-bottom: 20px;
+    }
+
+    .cart-modal-header h2 {
+        font-size: 21px;
+    }
+
+    .cart-close {
+        width: 33px !important;
+        height: 28px !important;
+
+        min-width: 33px !important;
+        min-height: 28px !important;
+    }
+
+    .cart-item {
+        min-height: 100px;
+
+        padding: 10px 8px;
+
+        overflow: hidden !important;
+    }
+
+    .cart-item-img {
+        width: 48px !important;
+        height: 48px !important;
+
+        min-width: 48px !important;
+        min-height: 48px !important;
+
+        max-width: 48px !important;
+        max-height: 48px !important;
+
+        flex: 0 0 48px !important;
+
+        margin-right: 8px !important;
+    }
+
+    .cart-item img {
+        width: 48px !important;
+        height: 48px !important;
+
+        min-width: 48px !important;
+        min-height: 48px !important;
+
+        max-width: 48px !important;
+        max-height: 48px !important;
+
+        flex: 0 0 48px !important;
+
+        margin-right: 8px !important;
+    }
+
+    .cart-item-name {
+        font-size: 17px;
+    }
+
+    .cart-item-price {
+        font-size: 16px;
+    }
+
+    .cart-item-total {
+        min-width: 95px;
+
+        font-size: 16px;
+    }
+
+    .cart-remove {
+        width: 30px !important;
+        height: 26px !important;
+
+        min-width: 30px !important;
+        min-height: 26px !important;
+
+        flex: 0 0 30px !important;
+
+        margin-left: 7px !important;
+    }
+
+}
+
+
+/* =========================================  
+   SMALL MOBILE  
+   ========================================= */
+
+@media (max-width: 450px) {
+
+    .product-items {
+        width: 100%;
+
+        margin-right: 0;
+    }
+
+    .product-img {
+        height: 190px;
+    }
+
+
+    .model-page {
+        padding: 16px;
+    }
+
+    .modaldesc-img {
+        height: 200px;
+    }
+
+    .btn-control {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+
+    /* =====================================
+       CART SMALL MOBILE
+       ===================================== */
+
+    .cart-modal-content {
+        width: 95vw;
+
+        padding: 20px 15px;
+    }
+
+    .cart-modal-header {
+        margin-bottom: 18px;
+    }
+
+    .cart-modal-header h2 {
+        font-size: 20px;
+    }
+
+    .cart-item {
+        align-items: center;
+
+        padding: 9px 7px;
+    }
+
+    .cart-item-img {
+        width: 45px !important;
+        height: 45px !important;
+
+        min-width: 45px !important;
+        min-height: 45px !important;
+
+        max-width: 45px !important;
+        max-height: 45px !important;
+
+        flex: 0 0 45px !important;
+
+        margin-right: 7px !important;
+    }
+
+    .cart-item img {
+        width: 45px !important;
+        height: 45px !important;
+
+        min-width: 45px !important;
+        min-height: 45px !important;
+
+        max-width: 45px !important;
+        max-height: 45px !important;
+
+        flex: 0 0 45px !important;
+
+        margin-right: 7px !important;
+    }
+
+    .cart-item-total {
+        min-width: auto;
+
+        font-size: 14px;
+    }
+
+    .cart-item-name {
+        font-size: 15px;
+    }
+
+    .cart-item-price {
+        font-size: 14px;
+    }
+
+    .cart-remove {
+        width: 28px !important;
+        height: 25px !important;
+
+        min-width: 28px !important;
+        min-height: 25px !important;
+
+        flex: 0 0 28px !important;
+
+        margin-left: 5px !important;
+    }
+
+}

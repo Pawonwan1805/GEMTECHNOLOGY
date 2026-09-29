@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แลปท็อป</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="image/gem.png" class="logonav" alt="Gem">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-menu-item">
+                    HOME
+                </a>
+                <a href="about.html" class="nav-menu-item">
+                    ABOUT
+                </a>
+                <a href="support.html" class="nav-menu-item">
+                    SUPPORT
+                </a>
+            </div>
+            <div class="nav-profile">
+
+                <!-- ไอคอนผู้ใช้ -->
+                <i class="fa-solid fa-user user-icon"></i>
+
+                <!-- ปุ่มเข้าสู่ระบบ -->
+                <a href="login.html" class="login-button" id="profile-link">
+                    เข้าสู่ระบบ
+                </a>
+
+                <!-- ชื่อผู้ใช้ -->
+                <p class="nav-profile-name">GEM</p>
+
+                <!-- ตะกร้า -->
+                <div class="nav-profile-cart">
+                    <i class="fas fa-bag-shopping"></i>
+                    <div class="cartcount">0</div>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" class="sidebar-search" placeholder="Search">
+            <a href="menu1.html" class="sidebar-items">
+                อุปกรณ์เสริม
+            </a>
+            <a href="menu2.html" class="sidebar-items">
+                โทรศัพท์มือถือ
+            </a>
+            <a href="menu3.html" class="sidebar-items">
+                แลปท็อป
+            </a>
+
+        </div>
+        <div class="product" data-category="laptop">
+            <h1 class="category-title">แลปท็อป</h1>
+            <div class="product-items">
+                <p style="font-size: 1.2vw;">Laptop </p>
+                <img class="product-img" src="image/labtop.jpg" alt="Laptop ">
+                <strong style="font-size: 1.2vw;">25,900 บาท</strong>
+            </div>
+            <div class="product-items">
+                <p style="font-size: 1.2vw;">Hub สำหรับ Laptop</p>
+                <img class="product-img" src="image/hub.jpg" alt="Hub สำหรับ Laptop">
+                <strong style="font-size: 1.2vw;">2,900 บาท</strong>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="common.js"></script>
+    <script src="cart.js"></script>
+    <script src="detail.js"></script>
+    <script src="profile-link.js"></script>
+    <script src="products.js"></script>
+</body>
+
+</html>

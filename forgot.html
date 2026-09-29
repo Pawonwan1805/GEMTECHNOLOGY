@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>ลืมรหัสผ่าน</title>
+</head>
+<body>
+    <div class="container" style="max-width: 420px; min-height: auto; padding: 30px 0;">
+        <form id="forgot-form">
+            <h1>ลืมรหัสผ่าน</h1>
+            <span>กรอกอีเมลและตั้งรหัสผ่านใหม่</span>
+            <input type="email" id="forgot-email" placeholder="Email" required>
+            <input type="password" id="forgot-password" placeholder="รหัสผ่านใหม่ (อย่างน้อย 6 ตัว)" minlength="6" required>
+            <input type="password" id="forgot-confirm" placeholder="ยืนยันรหัสผ่านใหม่" required>
+            <p class="form-error" id="forgot-error"></p>
+            <button type="submit">เปลี่ยนรหัสผ่าน</button>
+            <a href="login.html">กลับไปหน้าเข้าสู่ระบบ</a>
+        </form>
+    </div>
+    <script src="forgot.js"></script>
+</body>
+</html>

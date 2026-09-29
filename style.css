@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fbfbfc;
+    color: #333;
+}
+header {
+    width: 100%;
+    padding: 25px 8%;
+    border-bottom: 1px solid #ddd;
+}
+header h1 {
+    background-color: #cfeefa;
+    border: 2px solid #212222;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 100%;
+}
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: #333;
+}
+
+nav a:hover {
+    color: #777;
+}
+main {
+    width: 90%;
+    background-color: #cfeefa;
+    border: 2px solid #212222;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 100%;
+}
+main h2 {
+    margin-bottom: 30px;
+}
+.product {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 230px;
+
+    border-bottom: 1px solid #05037c;
+
+    padding: 25px 0;
+}
+.product-image {
+    width: 30%;
+}
+.product-image img {
+    width: 200px;
+    height: 170px;
+
+    object-fit: cover;
+
+    border: 1px solid #0568aa;
+    border-radius: 10px;
+}
+.product-detail {
+    width: 45%;
+}
+
+.product-detail h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.product-detail p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* ราคา */
+
+.product-price {
+    width: 25%;
+    text-align: center;
+}
+
+.product-price button {
+    font-size: 25px;
+
+    background: white;
+
+    border: 1px solid #aaa;
+    border-radius: 8px;
+
+    padding: 8px 15px;
+
+    cursor: pointer;
+}
+
+.product-price button:hover {
+    background: #eee;
+}
+
+.product-price p {
+    margin-top: 15px;
+}
+
+.product-price strong {
+    font-size: 20px;
+}

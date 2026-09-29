@@ -1,0 +1,1988 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    background: white;
+    color: #111;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+    background: rgba(255, 255, 255, 0.90);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 12px 24px;
+
+    position: fixed;
+
+    width: 80%;
+    height: 70px;
+
+    left: 50%;
+    top: 20px;
+
+    transform: translateX(-50%);
+
+    border-radius: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow: 0 6px 32px rgba(31, 38, 135, 0.25);
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    color: #160592;
+}
+
+
+/* =====================================================
+   NAV CONTAINER
+===================================================== */
+
+.nav-container {
+    max-width: 90vw;
+
+    width: 100%;
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logonav {
+    width: 10vw;
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   NAV BRAND
+===================================================== */
+
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =====================================================
+   HOME / ABOUT / SUPPORT MENU
+===================================================== */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.nav-menu-item {
+    position: relative;
+
+    color: #160592;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 8px 5px;
+
+    transition: 0.3s;
+}
+
+
+.nav-menu-item:hover {
+    color: #041472;
+}
+
+
+.nav-menu-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #160592;
+
+    transform: translateX(-50%);
+
+    transition: 0.3s;
+}
+
+
+.nav-menu-item:hover::after {
+    width: 100%;
+}
+
+
+.nav-menu-item.active {
+    color: #160592;
+}
+
+
+.nav-menu-item.active::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   PROFILE AREA
+===================================================== */
+
+.nav-profile {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    color: #160592;
+}
+
+
+/* =====================================================
+   USER ICON
+===================================================== */
+
+.user-icon {
+    font-size: 20px;
+    color: #160592;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.login-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 12px;
+
+    border: 1px solid #160592;
+
+    border-radius: 8px;
+
+    color: #160592;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.login-button:hover {
+    background: #160592;
+    color: white;
+}
+
+
+/* =====================================================
+   PROFILE NAME
+===================================================== */
+
+.nav-profile-name {
+    margin: 0;
+
+    color: #160592;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SHOPPING CART
+===================================================== */
+
+.nav-profile-cart {
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.fa-bag-shopping {
+    color: #160592;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+
+.nav-profile-cart:hover .fa-bag-shopping {
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   CART COUNT
+===================================================== */
+
+.cartcount {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    width: 18px;
+    height: 18px;
+
+    background: red;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   BANNER
+===================================================== */
+
+.banner-slider {
+    width: 90%;
+    max-width: 1400px;
+
+    height: 420px;
+
+
+    margin: 110px auto 0;
+
+    position: relative;
+
+    overflow: hidden;
+    border-radius: 15px;
+    background: #f5f5f5;
+}
+
+
+.banner-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.banner-slide {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    object-fit: cover;
+}
+
+
+.banner-slide.active {
+    display: block;
+}
+
+
+/* =====================================================
+   BANNER PREV / NEXT
+===================================================== */
+
+.banner-prev,
+.banner-next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    color: #160592;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+
+.banner-prev {
+    left: 20px;
+}
+
+
+.banner-next {
+    right: 20px;
+}
+
+
+.banner-prev:hover,
+.banner-next:hover {
+    background: #160592;
+
+    color: white;
+
+    transform: translateY(-50%) scale(1.05);
+}
+
+
+/* =====================================================
+   BANNER DOTS
+===================================================== */
+
+.banner-dots {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 10px;
+
+    z-index: 10;
+}
+
+
+.banner-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border: 1px solid white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.banner-dot.active {
+    width: 28px;
+
+    border-radius: 10px;
+
+    background: #160592;
+}
+
+
+/* =====================================================
+   BANNER RESPONSIVE
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .banner-slider {
+        margin-top: 90px;
+    }
+
+    .banner-prev,
+    .banner-next {
+        width: 35px;
+        height: 35px;
+
+        font-size: 18px;
+    }
+
+    .banner-prev {
+        left: 10px;
+    }
+
+    .banner-next {
+        right: 10px;
+    }
+
+    .banner-dots {
+        bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .banner-slider {
+        margin-top: 80px;
+    }
+
+    .banner-prev,
+    .banner-next {
+        width: 30px;
+        height: 30px;
+
+        font-size: 16px;
+    }
+
+    .banner-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .banner-dot.active {
+        width: 20px;
+    }
+}
+
+
+/* =====================================================
+   SHOP LAYOUT
+   SIDEBAR + PRODUCT
+===================================================== */
+
+/*
+    ส่วนนี้คือส่วนที่เปลี่ยนหลัก
+
+    Sidebar อยู่ด้านซ้าย
+    Product อยู่ด้านขวา
+*/
+
+.shop-layout {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 20px auto 60px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+    width: 185px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.sidebar-search {
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 2px solid transparent;
+
+    outline: none;
+
+    border-radius: 5px;
+
+    background: #f5f5f5;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.sidebar-search:focus {
+    border: 2px solid #dfe0e2;
+
+    background: white;
+}
+
+
+/* =====================================================
+   SIDEBAR CATEGORY
+   แก้เฉพาะส่วนปุ่มเลือกหมวดหมู่
+===================================================== */
+
+.sidebar-items {
+    width: 100%;
+
+    min-height: 42px;
+
+    padding: 10px 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    background: #ffffff;
+
+    border: 1px solid #176b87;
+
+    border-radius: 8px;
+
+    color: #222;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+
+.sidebar-items:hover {
+    background: #041472;
+
+    color: white;
+
+    border-color: #041472;
+
+    transform: translateX(3px);
+
+    box-shadow: 0 5px 12px rgba(4, 20, 114, 0.18);
+}
+
+
+/* หมวดหมู่ที่กำลังเลือกอยู่ */
+
+.sidebar-items.active {
+    background: #041472;
+
+    color: white;
+
+    border-color: #041472;
+
+    box-shadow: 0 5px 12px rgba(4, 20, 114, 0.18);
+}
+
+
+/* =====================================================
+   SIDEBAR BUTTON
+   เผื่อมี button ในอนาคต
+===================================================== */
+
+.sidebar button {
+    width: 100%;
+
+    min-height: 42px;
+
+    padding: 10px 14px;
+
+    margin: 0;
+
+    background: white;
+
+    border: 1px solid #176b87;
+
+    border-radius: 8px;
+
+    color: #222;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.sidebar button:hover {
+    background: #041472;
+
+    color: white;
+
+    border-color: #041472;
+
+    transform: translateX(3px);
+
+    box-shadow: 0 5px 12px rgba(4, 20, 114, 0.18);
+}
+
+
+/* =====================================================
+   PRODUCT AREA
+===================================================== */
+
+/*
+    ไม่ใช้ grid ตรงนี้แล้ว
+    เพราะเรามี .product-list ครอบการ์ดสินค้า
+*/
+
+.product {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 20px;
+
+    min-height: 500px;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   CATEGORY TITLE
+===================================================== */
+
+.category-title {
+    margin: 0 0 25px 0;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    color: #000;
+}
+
+
+/* =====================================================
+   PRODUCT LIST
+===================================================== */
+
+.product-list {
+    width: 100%;
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+.product-items {
+    width: 290px;
+
+    min-width: 0;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 12px;
+
+    transition: 0.25s ease;
+
+    cursor: pointer;
+}
+
+
+.product-items:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border-color: rgba(255, 255, 255, 0.9);
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   PRODUCT NAME
+===================================================== */
+
+.product-items p {
+    margin: 0 0 12px 0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    color: #111;
+}
+
+
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
+
+.product-img {
+    width: 100%;
+
+    height: 315px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   PRODUCT PRICE
+===================================================== */
+
+.product-items strong {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #111;
+}
+
+
+/* =====================================================
+   PRODUCT DETAIL
+   แก้เฉพาะส่วนนี้
+   ไม่ผูกกับ JavaScript
+===================================================== */
+
+.model {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    z-index: 2000;
+
+    overflow-y: auto;
+
+    font-size: 16px;
+}
+
+
+/* กล่องรายละเอียดสินค้า */
+
+.model-page,
+.modal-page {
+    position: relative;
+
+    width: min(900px, 92vw);
+
+    max-width: 900px;
+
+    min-height: 420px;
+
+    max-height: 90vh;
+
+    margin: auto;
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* หัวข้อรายละเอียด */
+
+.model-page h2,
+.modal-page h2 {
+    margin: 0 0 22px;
+
+    color: #111;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+/* เนื้อหารายละเอียด */
+
+.modaldesc-content {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 22px;
+
+    background: #f5f5f5;
+
+    border-radius: 16px;
+}
+
+
+/* รูปสินค้า */
+
+.modaldesc-img {
+    width: 330px;
+
+    height: 330px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 15px;
+}
+
+
+/* ส่วนข้อมูลสินค้า */
+
+.modaldesc-detail {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 10px;
+}
+
+
+/* ข้อความในรายละเอียด */
+
+.modaldesc-detail p {
+    margin: 0 0 12px;
+
+    color: #111;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* ชื่อสินค้า */
+
+.modaldesc-detail p:first-child {
+    font-size: 28px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* ราคา */
+
+.modaldesc-detail p:nth-child(2) {
+    color: #160592;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+/* รายละเอียดสินค้า */
+
+.modaldesc-detail p:nth-child(3) {
+    color: #555;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   GENERAL BUTTON
+===================================================== */
+
+.btn {
+    padding: 10px 20px;
+
+    background: #5b5d5d60;
+
+    color: rgb(9, 1, 1);
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   BUY BUTTON
+===================================================== */
+
+.btn-buy {
+    background: linear-gradient(125deg,
+            #041472,
+            #160592);
+
+    color: white;
+
+    margin-left: 20px;
+}
+
+
+/* =====================================================
+   CART PAGE
+===================================================== */
+
+.cart-page {
+    box-sizing: border-box;
+
+    width: min(96vw, 1200px);
+
+    min-width: min(96vw, 420px);
+
+    max-height: 92vh;
+
+    margin: 0 auto;
+
+    overflow-y: auto;
+
+    background: linear-gradient(145deg,
+            #ffffff,
+            #eef1ff);
+
+    border: 1px solid #d7dcf4;
+
+    padding: clamp(20px, 4vw, 44px);
+
+    border-radius: 24px;
+
+    box-shadow: 0 18px 50px rgba(1, 9, 48, 0.28);
+
+    font-size: clamp(1.15rem,
+            1.4vw + 2rem,
+            1.5rem);
+
+    font-family: "Noto Sans", sans-serif;
+}
+
+
+/* =====================================================
+   CART HEADING
+===================================================== */
+
+.cart-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   CART BUTTON
+===================================================== */
+
+.cart-close,
+.cart-remove {
+    border: 0;
+
+    border-radius: 5px;
+
+    padding: 7px 12px;
+
+    background: #777;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.cart-close:hover,
+.cart-remove:hover {
+    background: #555;
+}
+
+
+/* =====================================================
+   CART ITEMS
+===================================================== */
+
+.cart-items {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =====================================================
+   CART ITEM
+===================================================== */
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid #e0e4f5;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(1, 9, 48, 0.06);
+}
+
+
+/* =====================================================
+   CART IMAGE
+===================================================== */
+
+.cart-item img {
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+
+/* =====================================================
+   CART ITEM INFO
+===================================================== */
+
+.cart-item-info {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* =====================================================
+   QUANTITY CONTROL
+===================================================== */
+
+.quantity-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 4px;
+}
+
+
+.quantity-button {
+    width: 26px;
+
+    height: 26px;
+
+    border: 0;
+
+    border-radius: 4px;
+
+    background: #160592;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.quantity-button:hover {
+    background: #041472;
+}
+
+
+/* =====================================================
+   SUBTOTAL
+===================================================== */
+
+.item-subtotal {
+    margin-left: auto;
+
+    color: #160592;
+}
+
+
+/* =====================================================
+   CART SUMMARY
+===================================================== */
+
+.cart-summary {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 2px solid #dfe0e2;
+
+    font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   CART TOTAL
+===================================================== */
+
+.cart-total {
+    color: #160592;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   EMPTY CART
+===================================================== */
+
+.empty-cart {
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media screen and (max-width: 1200px) {
+
+    nav {
+        width: 90%;
+    }
+
+    .nav-menu {
+        gap: 25px;
+    }
+
+    .shop-layout {
+        width: 92%;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .product-list {
+        gap: 20px;
+    }
+
+    .product-items {
+        width: 260px;
+    }
+
+    .product-img {
+        height: 280px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET SMALL
+===================================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .product-list {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .product-items {
+        width: 100%;
+    }
+
+    .product-img {
+        height: 30vw;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* NAV */
+
+    nav {
+        width: 94%;
+
+        height: 60px;
+
+        top: 10px;
+
+        padding: 8px 15px;
+    }
+
+
+    .logonav {
+        width: 15vw;
+    }
+
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+
+    .nav-menu-item {
+        font-size: 11px;
+
+        padding: 6px 2px;
+    }
+
+
+    .nav-profile {
+        gap: 8px;
+    }
+
+
+    .user-icon {
+        font-size: 16px;
+    }
+
+
+    .login-button {
+        padding: 5px 8px;
+
+        font-size: 12px;
+    }
+
+
+    .nav-profile-name {
+        font-size: 13px;
+    }
+
+
+    .fa-bag-shopping {
+        font-size: 18px;
+    }
+
+
+    .cartcount {
+        width: 16px;
+
+        height: 16px;
+
+        font-size: 9px;
+
+        top: -4px;
+
+        right: -4px;
+    }
+
+
+    /* SHOP LAYOUT */
+
+    .shop-layout {
+        width: 94%;
+
+        margin-top: 15px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+        width: 100%;
+    }
+
+
+    /* PRODUCT */
+
+    .product {
+        width: 100%;
+
+        padding: 15px;
+    }
+
+
+    .product-list {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .product-items {
+        width: 100%;
+
+        padding: 12px;
+    }
+
+
+    .product-img {
+        height: 35vw;
+    }
+
+
+    .category-title {
+        font-size: 24px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .product-items p {
+        font-size: 18px;
+    }
+
+
+    .product-items strong {
+        font-size: 18px;
+    }
+
+
+    /* MODAL */
+
+    .model-page,
+    .modal-page {
+        width: 92vw;
+
+        max-height: 90vh;
+
+        padding: 20px;
+    }
+
+
+    .modaldesc-content {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+
+    .modaldesc-img {
+        width: 100%;
+
+        height: 55vw;
+
+        max-height: 320px;
+    }
+
+
+    .modaldesc-detail {
+        margin-left: 0;
+
+        margin-top: 0;
+
+        padding: 5px;
+    }
+
+
+    .modaldesc-detail p:first-child {
+        font-size: 24px;
+    }
+
+
+    .modaldesc-detail p:nth-child(2) {
+        font-size: 20px;
+    }
+
+
+    .btn-buy {
+        margin-left: 10px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - SMALL MOBILE
+===================================================== */
+
+@media screen and (max-width: 480px) {
+
+    nav {
+        width: 96%;
+    }
+
+
+    .logonav {
+        width: 25vw;
+    }
+
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+
+    .nav-menu-item {
+        font-size: 9px;
+
+        padding: 5px 1px;
+    }
+
+
+    .nav-profile {
+        gap: 6px;
+    }
+
+
+    .login-button {
+        font-size: 11px;
+
+        padding: 4px 6px;
+    }
+
+
+    .nav-profile-name {
+        display: none;
+    }
+
+
+    .shop-layout {
+        width: 94%;
+    }
+
+
+    .product {
+        width: 100%;
+
+        padding: 12px;
+    }
+
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .product-img {
+        height: 60vw;
+    }
+
+
+    /* CART */
+
+    .cart-page {
+        min-width: 94vw;
+
+        padding: 20px;
+    }
+
+
+    /* PRODUCT DETAIL */
+
+    .model {
+        padding: 12px;
+    }
+
+
+    .model-page,
+    .modal-page {
+        width: 94vw;
+
+        padding: 16px;
+
+        border-radius: 14px;
+    }
+
+
+    .modaldesc-img {
+        height: 65vw;
+    }
+
+
+    .modaldesc-detail p:first-child {
+        font-size: 22px;
+    }
+
+
+    .btn {
+        font-size: 14px;
+    }
+
+
+    .btn-buy {
+        margin-left: 5px;
+    }
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 60px;
+
+    padding: 70px 5% 25px;
+}
+
+
+.footer-container {
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.4fr;
+
+    gap: 70px;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand {
+    max-width: 550px;
+}
+
+
+.footer-logo {
+    width: 150px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 25px;
+}
+
+
+.footer-brand p {
+    color: #333;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   FOOTER EMAIL
+===================================================== */
+
+.footer-form {
+    width: 100%;
+
+    max-width: 540px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 5px;
+
+    background: #ffffff;
+
+    border-radius: 40px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.footer-form input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 14px 20px;
+
+    font-size: 15px;
+
+    border-radius: 30px;
+}
+
+
+.footer-form button {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(125deg,
+            #041472,
+            #160592);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.footer-form button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+.footer-links,
+.footer-contact {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.footer h3 {
+    margin-bottom: 20px;
+
+    color: #111;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+.footer-links a {
+    color: #222;
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+
+    transition: 0.2s;
+}
+
+
+.footer-links a:hover {
+    color: #160592;
+
+    transform: translateX(3px);
+}
+
+
+.footer-course-title {
+    margin-top: 35px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.footer-contact p {
+    margin-bottom: 14px;
+
+    color: #222;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.footer-social {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+
+.footer-social a {
+    color: #222;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+
+.footer-social a:hover {
+    color: #160592;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: 70px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #333;
+
+    font-size: 14px;
+}
+
+
+.footer-bottom a {
+    color: #333;
+}
+
+
+.footer-bottom a:hover {
+    color: #160592;
+}
+
+
+/* =====================================================
+   FOOTER RESPONSIVE
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .footer {
+        padding: 50px 5% 20px;
+    }
+
+
+    .footer-container {
+        width: 94%;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+
+    .footer-form {
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+        width: 94%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        margin-top: 40px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .footer {
+        padding: 40px 5% 20px;
+    }
+
+
+    .footer-form {
+        flex-direction: column;
+
+        background: transparent;
+
+        box-shadow: none;
+    }
+
+
+    .footer-form input {
+        width: 100%;
+
+        margin-bottom: 10px;
+
+        border: 1px solid #ddd;
+    }
+
+
+    .footer-form button {
+        width: 100%;
+    }
+
+
+    .footer h3 {
+        font-size: 21px;
+    }
+}

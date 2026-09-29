@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GEMII - หน้าแรก</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav>
+        <div class="nav-container">
+
+            <!-- LOGO -->
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="image/gem.png" class="logonav" alt="Gemii">
+                </a>
+            </div>
+
+
+            <!-- HOME / ABOUT / SUPPORT -->
+            <div class="nav-menu">
+
+                <a href="index.html" class="nav-menu-item active">
+                    HOME
+                </a>
+
+                <a href="about.html" class="nav-menu-item">
+                    ABOUT
+                </a>
+
+                <a href="support.html" class="nav-menu-item">
+                    SUPPORT
+                </a>
+
+            </div>
+
+
+            <!-- PROFILE -->
+            <div class="nav-profile">
+
+                <!-- User Icon -->
+                <i class="fa-solid fa-user user-icon"></i>
+
+                <!-- Login -->
+                <a href="login.html" class="login-button" id="profile-link">
+                    เข้าสู่ระบบ
+                </a>
+
+                <!-- Username -->
+                <p class="nav-profile-name">
+                    GEM
+                </p>
+
+                <!-- Shopping Cart -->
+                <div class="nav-profile-cart">
+
+                    <i class="fas fa-bag-shopping"></i>
+
+                    <div class="cartcount">
+                        0
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- =====================================================
+         BANNER SLIDER
+    ====================================================== -->
+
+    <div class="banner-slider">
+
+        <div class="banner-slides">
+
+            <img src="image/gem.jpg" alt="gem" class="banner-slide active">
+
+            <img src="image/bannergem.jpg" alt="GEM Smartphone" class="banner-slide">
+
+            <img src="image/bannerlap.jpg" alt="laptop" class="banner-slide">
+
+            <img src="image/banner.jpg" alt="gem" class="banner-slide">
+
+        </div>
+
+
+        <!-- ปุ่มซ้าย -->
+        <button class="banner-prev" onclick="changeBanner(-1)">
+            &#10094;
+        </button>
+
+
+        <!-- ปุ่มขวา -->
+        <button class="banner-next" onclick="changeBanner(1)">
+            &#10095;
+        </button>
+
+
+        <!-- จุดด้านล่าง -->
+        <div class="banner-dots">
+
+            <span class="banner-dot active" onclick="showBanner(0)">
+            </span>
+
+            <span class="banner-dot" onclick="showBanner(1)">
+            </span>
+
+            <span class="banner-dot" onclick="showBanner(2)">
+            </span>
+
+            <span class="banner-dot" onclick="showBanner(3)">
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SHOP CONTENT
+         SIDEBAR + PRODUCT
+    ====================================================== -->
+
+    <div class="shop-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+            <!-- Search -->
+            <input type="text" class="sidebar-search" placeholder="Search">
+
+
+            <!-- Accessories -->
+            <a href="menu1.html" class="sidebar-items">
+                อุปกรณ์เสริม
+            </a>
+
+
+            <!-- Smartphone -->
+            <a href="menu2.html" class="sidebar-items">
+                โทรศัพท์มือถือ
+            </a>
+
+
+            <!-- Laptop -->
+            <a href="menu3.html" class="sidebar-items">
+                แลปท็อป
+            </a>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             PRODUCT
+        ================================================== -->
+
+        <section class="product">
+
+            <!-- Title -->
+            <h1 class="category-title">
+                สินค้าแนะนำ
+            </h1>
+
+
+            <!-- Product List
+                 สินค้าจะถูกโหลดจาก Supabase -->
+            <div class="product-list" id="product-list">
+
+                <!-- JavaScript จะสร้างสินค้าให้ตรงนี้ -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!-- Cart -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="common.js"></script>
+    <script src="cart.js"></script>
+
+    <!-- Product Detail -->
+    <script src="detail.js"></script>
+
+    <!-- Profile -->
+    <script src="profile-link.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="products.js"></script>
+    <script src="index.js"></script>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                <img src="image/gem.png" alt="GEM" class="footer-logo">
+
+                <p>
+                    GEM is your trusted destination for quality products.
+                    Discover our collection and find the products that
+                    suit your needs.
+                </p>
+
+
+                <div class="footer-form">
+
+                    <input type="text" placeholder="Enter your email">
+
+                    <button>
+                        Get Started
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="support.html">
+                    Support
+                </a>
+
+                <a href="#">
+                    Products
+                </a>
+
+
+                <h3 class="footer-course-title">
+                    Services
+                </h3>
+
+                <a href="#">
+                    New Arrivals
+                </a>
+
+                <a href="#">
+                    Best Sellers
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-contact">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📍 GEM Company
+                </p>
+
+                <p>
+                    เลขที่ 38 หมู่ 8 ถนนหาดเจ้าสำราญ
+                    ตำบลนาวุ้ง อำเภอเมืองเพชรบุรี
+                    จังหวัดเพชรบุรี 76000
+                </p>
+
+                <p>
+                    ✉ support@gem.com
+                </p>
+
+                <p>
+                    ☎ 032-708605
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        Facebook
+                    </a>
+
+                    <a href="#">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        LINE
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <span>
+                © 2026 GEM. All Rights Reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
